@@ -1,0 +1,64 @@
+﻿@model LescanoErickT2.Models.Alumno
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar alumno</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Alumno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carrera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ciclo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ciclo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>
